@@ -9,7 +9,8 @@ class Transaction:
         self.note = note
 
     def display_info(self):
-        return f"Transaction:\n Expense: {self.title}\n Amount: {self.amount}\n Type: {self.type}\n Note: {self.note}"
+        return f"Transaction: \n Expense: {self.title}\n Amount: {self.amount}\n Type: " \
+               f" {self.type}\n Note: {self.note}"
 
 
 class Bank:
@@ -24,7 +25,7 @@ class Bank:
     def del_transaction(self, title):
         for transaction in self.wallet:
             if transaction.title == title:
-                self.wallet.remove(trans)
+                self.wallet.remove(transaction)
                 return f"{title} has been removed!"
         return f"{title} is not found..."
 
